@@ -1,0 +1,10 @@
+@startuml
+
+Member -> Front: Ajoute une recette en favoris
+Front -> Back: Requete d'ajout en favoris
+Back --> BDD: Requete SQL 
+
+BDD -->> Back: Reponse requete SQL
+Back -->> Front: Reponse Requete d'ajout en favoris
+Front -->> Member: Recette aoutée en favoris
+@enduml
