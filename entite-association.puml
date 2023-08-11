@@ -1,0 +1,30 @@
+@startuml Diagramme Entité-Relation
+
+entity "Recette" as Recette {
+  *id: number <<generated>>
+  --
+  *name: text
+  *description: text
+  *preparation-time: time
+  *cuiscook-time: time
+  *difficulty: int
+}
+
+entity "Ingredient" as Ingredient {
+  *id: number <<generated>>
+  --
+  *name: text
+  *quantity: int
+  *Type_id: number <<FK>>
+  *Recette_id: number <<FK>>
+}
+
+entity "Type d'ingrédient" as Type {
+  *id: number <<generated>>
+  --
+  *type: text
+}
+
+Recette ||--o{ Ingredient
+Type ||--o{ Ingredient
+@enduml
