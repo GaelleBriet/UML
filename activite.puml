@@ -1,0 +1,11 @@
+@startuml Diagramme d'activité : Ajout d'une recette en favoris
+
+start
+:Membre clique sur le bouton "Ajouter en favoris";
+if (recette déja en favoris ?) then (oui)
+  :Retirer la recette des favoris;
+else (non)
+  :Ajouter la recette en favoris;
+endif    
+end
+@enduml
