@@ -1,0 +1,18 @@
+@startuml Diagramme des cas d'utilisation
+left to right direction
+
+actor Utilisateur as User
+actor Membre as Member
+
+usecase "Afficher la liste des recettes" as ucList
+usecase "Filtrer la liste des recettes" as ucFilter
+usecase "Afficher le détail d'une recette" as ucDetail
+usecase "Ajouter une recette en favoris" as ucFav
+
+User --> ucList
+User --> ucFilter
+User -->ucDetail
+Member --> ucFav
+
+User <|-- Member
+@enduml
